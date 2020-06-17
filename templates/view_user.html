@@ -1,0 +1,80 @@
+<link href="{{ url_for('static', filename='css/logincsscode1.css') }}" rel="stylesheet" id="bootstrap-css">
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View User Vote</title>
+   <!--Made with love by Mutiullah Samim -->
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/logincsscode2.css')}}" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkF	OJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/logincsscode3.css') }}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+	<style type="text/css">
+		
+	html,body{
+	background-color:#416983;
+	font-family: 'Numans', sans-serif;
+
+
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>View User Vote</h3>
+				<div class="d-flex justify-content-end social_icon">
+					<!-- <span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-google-plus-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span> -->
+				</div>
+			</div>
+			<div class="card-body">
+				<form action = "http://localhost:5000/view_user" method = "POST">
+					
+
+					<font color="white">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input name="VoterID" type="text" class="form-control" placeholder="VoterID" >
+						
+					</div>
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						</div>
+                        <p>Voted: {{votedflag}}</p>
+					</div>
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						</div>
+						<p>Voted for Party: {{partyname}}</p>
+					</div>
+
+				</font>
+					<div class="form-group">
+						<input name="action" type="submit" value="Fetch" class="btn float-right login_btn" >
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

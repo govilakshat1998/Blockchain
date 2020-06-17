@@ -1,0 +1,89 @@
+<link href="{{ url_for('static', filename='css/logincsscode1.css') }}" rel="stylesheet" id="bootstrap-css">
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caste Your Vote</title>
+   <!--Made with love by Mutiullah Samim -->
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/logincsscode2.css')}}" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkF	OJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/logincsscode3.css') }}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+	<style type="text/css">
+		
+	html,body{
+	background-color:#416983;
+	font-family: 'Numans', sans-serif;
+
+
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Caste Your Vote</h3>
+				<div class="d-flex justify-content-end social_icon">
+					<!-- <span><i class="fab fa-facebook-square"></i></span>
+					<span><i class="fab fa-google-plus-square"></i></span>
+					<span><i class="fab fa-twitter-square"></i></span> -->
+				</div>
+			</div>
+			<div class="card-body">
+				<form action = "http://localhost:5000/validate" method = "POST">
+					
+
+					<font color="white">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						</div>
+						<input type="radio" id="test1" name="vote" value="1" checked>
+                         <label for="test1">Bhartiya Janata Party</label>
+						
+					</div>
+					
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						</div>
+						<input type="radio" id="test2" name="vote" value="2">
+                        <label for="test2">Indian National Congress</label>
+					</div>
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						</div>
+						<input type="radio" id="test3" name="vote" value="3">
+                        <label for="test3">Bahujan Samaj Party</label>
+					</div>
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+						</div>
+						<input type="radio" id="test4" name="vote" value="4">
+                        <label for="test4">Communist Party Of India</label>
+					</div>
+				</font>
+					<div class="form-group">
+						<input name="action" type="submit" value="Vote" class="btn float-right login_btn" >
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center">
+					<a><font color="yellow">{{msg}}</a></font>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
